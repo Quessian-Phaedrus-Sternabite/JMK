@@ -1611,7 +1611,8 @@ def startfunc():
     score = str(J + M + K)
     print("Congratulations! You got " + score)
     print("Restart? Y/N ")
-    cmd = input("Restart")
+    cmdlist = ['Y', 'y', 'n', 'N']
+    cmd = getcmd(cmdlist)
     if cmd == 'y' or 'Y':
         print("BEGIN!")
         Thread(target = startfunc).start()
